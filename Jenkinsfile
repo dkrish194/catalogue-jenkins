@@ -12,6 +12,11 @@ pipeline{
                 echo "this is step in TWO stage"
             }
         }
+        stage{
+            steps{
+                sh /etc/os-release
+            }
+        }
     }
     post{
         always{
