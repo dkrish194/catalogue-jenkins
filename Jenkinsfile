@@ -4,7 +4,7 @@ pipeline{
         stage("BUILD"){
             steps{
                 echo "this is step one"
-                exit 1
+                // exit 1
             }
         }
         stage("TEST"){
