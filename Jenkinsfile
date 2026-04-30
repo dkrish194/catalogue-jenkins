@@ -17,7 +17,8 @@ pipeline{
             echo "this is always blcok"
         }
         success{
-            this is sucess block
+            echo "this is sucess block"
+
         }
         failure{
             echo "failure block"
