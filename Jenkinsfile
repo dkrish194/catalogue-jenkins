@@ -1,15 +1,19 @@
 pipeline{
     agent any
     stages{
-        stage("ONE"){
+        stage("BUILD"){
             steps{
                 echo "this is step one"
             }
         }
-        stage("TWO"){
+        stage("TEST"){
             steps{
                 echo "this is step in TWO stage"
             }
         }
     }
+    post{
+        echo "this is post block"
+    }
+
 }
