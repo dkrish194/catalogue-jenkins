@@ -13,7 +13,15 @@ pipeline{
         }
     }
     post{
-        echo "this is post block"
+        always{
+            echo "this is always blcok"
+        }
+        success{
+            this is sucess block
+        }
+        failure{
+            echo "failure block"
+        }
     }
 
 }
