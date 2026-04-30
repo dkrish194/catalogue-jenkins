@@ -1,10 +1,13 @@
 pipeline{
-    agent any
     stages{
-        stage("one"){
+        stage("ONE"){
             steps{
-                echo " this is stage one"
-                
+                echo -e "this is step one"
+            }
+        }
+        stage("TWO"){
+            steps{
+                echo -e "this is step in TWO stage"
             }
         }
     }
