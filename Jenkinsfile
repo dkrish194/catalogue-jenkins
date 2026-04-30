@@ -14,7 +14,7 @@ pipeline{
         }
         stage('THREE'){
             steps{
-                sh /etc/os-release
+                sh "/etc/os-release"
             }
         }
     }
