@@ -12,7 +12,7 @@ pipeline{
                 echo "this is step in TWO stage"
             }
         }
-        stage{
+        stage('THREE'){
             steps{
                 sh /etc/os-release
             }
