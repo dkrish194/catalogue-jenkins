@@ -1,7 +1,7 @@
 pipeline{
     agent {
         node {
-            label "ROBOSHOPP"
+            label "ROBOSHOP"
         }
     }
     
@@ -28,6 +28,9 @@ pipeline{
     }
     stages{
         stage("read version"){
+            when{
+                branch "main"
+            }
             steps{
                 echo " this is from read version"
                 echo "read parametes list ${params.PERSON}"
