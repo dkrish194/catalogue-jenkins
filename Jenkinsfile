@@ -8,12 +8,7 @@ pipeline{
             }
 
         }
-        stage("unit testing"){
-            steps{
-                sh " cat /etc/os-release"
-                sh "df -h /root/"
-            }
-        }
+
         stage('install dependency'){
             steps{
                 sh """
@@ -21,6 +16,12 @@ pipeline{
                     df -h /root/krishna
                 """
                 echo "after execute sh multiline"
+            }
+        }
+        stage("unit testing"){
+            steps{
+                sh " cat /etc/os-release"
+                sh "df -h /root/"
             }
         }
     }
