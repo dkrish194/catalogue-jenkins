@@ -12,7 +12,7 @@ pipeline{
         stage('install dependency'){
             steps{
                 sh """
-                    cat /cat/os-release
+                    cat /etc/os-release
                     df -h /root/krishna
                 """
                 echo "after execute sh multiline"
