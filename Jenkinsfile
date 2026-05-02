@@ -13,7 +13,6 @@ pipeline{
             steps{
                 sh """
                     cat /etc/os-release
-                    df -h /root/krishna
                 """
                 echo "after execute sh multiline"
             }
@@ -22,6 +21,8 @@ pipeline{
             steps{
                 sh " cat /etc/os-release"
                 sh "df -h /root/"
+                sh "df -h /root/krishna"
+
             }
         }
     }
