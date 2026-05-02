@@ -26,6 +26,8 @@ pipeline{
         stage("read version"){
             steps{
                 echo " this is from read version"
+                echo "read parametes list ${params.PERSON}"
+                echo "direct access the parameter like env : ${PERSON}"
 
             }
 
@@ -43,7 +45,7 @@ pipeline{
             steps{
                 sh " cat /etc/os-release"
                 sh "df -h /root/"
-                sh "df -h /root/krishna"
+                // sh "df -h /root/krishna"
 
             }
         }
