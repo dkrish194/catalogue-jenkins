@@ -5,11 +5,11 @@ pipeline{
     //     def name : "krishna"
     // }
     parameters{
-        string( name: 'PERSON', defaultvalue: "krishna", description: "who should")
-        text( name: 'BIO-DATA', defaultvalue: " soem text", description: "seems text box")
-        choice(name: 'CHOICE', defaultvalue: ['one','two','three'])
-        booleanParam(name: 'TOGGLE', defaultvalue: false)
-        password(name: 'PASSWORD', defaultvalue:'SECRET')
+        string( name: 'PERSON', defaultValue: "krishna", description: "who should")
+        text( name: 'BIO-DATA', defaultValue: " soem text", description: "seems text box")
+        choice(name: 'CHOICE', defaultValue: ['one','two','three'])
+        booleanParam(name: 'TOGGLE', defaultValue: false)
+        password(name: 'PASSWORD', defaultValue:'SECRET')
     }
     stages{
         stage("read version"){
