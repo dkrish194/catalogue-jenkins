@@ -14,7 +14,7 @@ pipeline{
                 sh "df -h /root/"
             }
         }
-        stage(install dependency){
+        stage('install dependency'){
             steps{
                 sh """
                     cat /cat/os-release
