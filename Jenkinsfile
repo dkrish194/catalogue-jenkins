@@ -1,9 +1,13 @@
 pipeline{
-    agent any
+    agent {
+        node {
+            label "ROBOSHOP"
+        }
+    }
     
-    // enviornment{
-    //     def name : "krishna"
-    // }
+    enviornment{
+        def name : "krishna"
+    }
     parameters{
         string( name: 'PERSON', defaultValue: "krishna", description: "who should")
         text( name: 'BIO-DATA', defaultValue: " soem text", description: "seems text box")
