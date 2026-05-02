@@ -14,5 +14,14 @@ pipeline{
                 sh "df -h /root/"
             }
         }
+        stage(install dependency){
+            steps{
+                sh """
+                    cat /cat/os-release
+                    df -h /root/krishna
+                """
+                echo "after execute sh multiline"
+            }
+        }
     }
 }
