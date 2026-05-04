@@ -28,6 +28,9 @@ pipeline{
     }
     stages{
         stage("read version"){
+            steps{
+                echo "git branch:  $env.GIT_BRANCH "
+            }
             when{
                 branch "main"
             }
@@ -44,8 +47,12 @@ pipeline{
             steps{
                 sh """
                     cat /etc/os-release
+                    echo "git branch in sh:  $env.GIT_BRANCH "
+
                 """
                 echo "after execute sh multiline"
+                echo "git branch not in sh:  $env.GIT_BRANCH "
+
             }
         }
         stage("unit testing"){
