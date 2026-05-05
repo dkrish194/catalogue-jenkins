@@ -28,9 +28,6 @@ pipeline{
     }
     stages{
         stage("read version"){
-            steps{
-                echo "git branch:  $env.GIT_BRANCH "
-            }
             when{
                 branch "main"
             }
