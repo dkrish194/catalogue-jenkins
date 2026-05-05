@@ -49,6 +49,7 @@ pipeline{
                 """
                 echo "after execute sh multiline"
                 echo "git branch not in sh:  $env.GIT_BRANCH "
+                echo "adding new line for test webhook"
 
             }
         }
